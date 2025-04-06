@@ -1,47 +1,57 @@
 # Automated Caesar Cipher Decoder
 
-This project implements an **Automated Caesar Cipher Decoder** using machine learning techniques. The decoder predicts the shift value used in a Caesar cipher by analyzing the frequency of letters in the ciphertext and decrypts it into plaintext.
+This project is a simple Python script that decodes messages encrypted using the Caesar Cipher technique. It uses a brute-force approach to try all 25 possible shifts and displays the results to help identify the correct plaintext message.
 
----
+## 🔍 What is a Caesar Cipher?
 
-## Table of Contents
+A Caesar Cipher is a type of substitution cipher where each letter in the plaintext is shifted a fixed number of places down the alphabet. It's one of the earliest known encryption techniques, named after Julius Caesar.
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Dataset](#dataset)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Model Training](#model-training)
-7. [Evaluation Metrics](#evaluation-metrics)
-8. [Contributing](#contributing)
-9. [License](#license)
+## 💡 Features
 
----
+- Accepts user input (encrypted message)
+- Tries all 25 possible shift keys
+- Displays all possible decoded outputs
+- Helps users manually identify the correct plaintext
 
-## Overview
+## 🧪 Example
 
-The Caesar cipher is a substitution cipher where each letter in the plaintext is shifted by a fixed number of positions down the alphabet. This project uses a **Random Forest Classifier** to predict the shift value based on letter frequency analysis of the ciphertext. Once the shift is predicted, the ciphertext is decrypted into readable plaintext.
+Input:
+```
+WKH HDJOH KDV ODQGHG
+```
 
----
-
-## Features
-
-- **Letter Frequency Analysis**: Computes the frequency of each letter in the ciphertext to predict the shift value.
-- **Machine Learning Model**: Uses a Random Forest Classifier for accurate shift prediction.
-- **Decryption Logic**: Decrypts ciphertexts using the predicted shift value.
-- **Error Handling**: Handles edge cases where predictions may not align with valid English words.
-
----
-
-## Dataset
-
-The dataset used for training and testing is stored in `cipher2.csv`. It contains:
-- `Text`: Ciphertext samples encrypted using various Caesar cipher shifts.
-- `Shift`: The corresponding shift values used for encryption.
-
-If you have a custom dataset, ensure it follows the same format:
-```csv
-Text,Shift
-"bcd",1
-"efg",2
+Output (snippet):
+```
+Key #1: VJG GCFKG JBU NCPEFC
+Key #2: UIF FEBJF IAT MBODEB
+Key #3: THE EAGLE HAS LANDED ✅
 ...
+```
+
+## 📜 How to Use
+
+1. Make sure you have Python installed.
+2. Run the script:
+   ```bash
+   python decoder.py
+   ```
+3. Enter the encrypted message when prompted.
+4. Look through the 25 possible outputs and find the readable sentence.
+
+## 📂 Files
+
+- `decoder.py` – The main script that runs the decryption.
+- `README.md` – This file.
+
+## 🛠️ Requirements
+
+- Python 3.x
+- No external libraries required
+
+## 📌 Note
+
+This script uses brute-force and is intended for educational and beginner cryptography purposes.
+
+## 📖 License
+
+MIT License
