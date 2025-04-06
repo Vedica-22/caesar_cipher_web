@@ -59,5 +59,17 @@ Text,Shift
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/caesar-cipher-decoder.git
-cd caesar-cipher-decoder ```
+cd caesar-cipher-decoder
+```
+
+## Usage
+
+### Train the Model
+Run the `train_model.py` script to train the model:
+```bash
+python train_model.py
+
+```
+
+
 
