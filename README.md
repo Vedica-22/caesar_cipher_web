@@ -1,6 +1,6 @@
-# Automated Caesar Cipher Decoder
+# 🔐 Automated Caesar Cipher Decoder
 
-This project implements an **Automated Caesar Cipher Decoder** using machine learning techniques. The decoder predicts the shift value used in a Caesar cipher by analyzing the frequency of letters in the ciphertext and decrypts it into plaintext.
+This project implements an **Automated Caesar Cipher Decoder** using machine learning. It predicts the Caesar cipher shift used in an encrypted message based on letter frequency analysis and then decrypts the ciphertext into readable English.
 
 ---
 
@@ -20,56 +20,45 @@ This project implements an **Automated Caesar Cipher Decoder** using machine lea
 
 ## Overview
 
-The Caesar cipher is a substitution cipher where each letter in the plaintext is shifted by a fixed number of positions down the alphabet. This project uses a **Random Forest Classifier** to predict the shift value based on letter frequency analysis of the ciphertext. Once the shift is predicted, the ciphertext is decrypted into readable plaintext.
+The **Caesar cipher** is a simple substitution cipher where each letter in the plaintext is shifted a certain number of places down the alphabet.  
+This project uses a **Random Forest Classifier** to predict the shift value based on the frequency of letters in the encrypted text, then decrypts the ciphertext accordingly.
 
 ---
 
 ## Features
 
-- **Letter Frequency Analysis**: Computes the frequency of each letter in the ciphertext to predict the shift value.  
-- **Machine Learning Model**: Uses a Random Forest Classifier for accurate shift prediction.  
-- **Decryption Logic**: Decrypts ciphertexts using the predicted shift value.  
-- **Error Handling**: Handles edge cases where predictions may not align with valid English words.  
+- **Letter Frequency Analysis**: Extracts letter distribution from ciphertexts  
+- **ML-Based Shift Prediction**: Trains a Random Forest Classifier on labeled Caesar cipher data  
+- **Automatic Decryption**: Uses the predicted shift to convert encrypted text into plaintext  
+- ⚠**Edge Case Handling**: Gracefully deals with low-confidence or anomalous predictions  
 
 ---
 
 ## Dataset
 
-The dataset used for training and testing is stored in `cipher2.csv`. It contains:  
-- `Text`: Ciphertext samples encrypted using various Caesar cipher shifts.  
-- `Shift`: The corresponding shift values used for encryption.
+The training dataset is stored in `cipher2.csv` and contains:
 
-If you have a custom dataset, ensure it follows the same format:
+| Text     | Shift |
+|----------|-------|
+| "bcd"    | 1     |
+| "efg"    | 2     |
+| ...      | ...   |
+
+If you’re using a custom dataset, ensure it follows this same structure:
 
 ```csv
 Text,Shift
 "bcd",1
-"efg",2
-...
-```
+"efg",2 
 
-## Installation
+---
+
+## ⚙️ Installation
 
 ### Prerequisites
+
 - Python 3.8 or higher  
-- Required libraries: `pandas`, `scikit-learn`, `nltk`, `joblib`
+- Install the required Python libraries:
 
-### Steps
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/caesar-cipher-decoder.git
-cd caesar-cipher-decoder
-```
-
-## Usage
-
-### Train the Model
-Run the `train_model.py` script to train the model:
-```bash
-python train_model.py
-
-```
-
-
-
+pip install pandas scikit-learn nltk joblib
