@@ -49,11 +49,12 @@ If you’re using a custom dataset, ensure it follows this same structure:
 ```csv
 Text,Shift
 "bcd",1
-"efg",2 
+"efg",2
+```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -62,3 +63,6 @@ Text,Shift
 
 ```bash
 pip install pandas scikit-learn nltk joblib
+```
+
+
